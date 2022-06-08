@@ -3,16 +3,13 @@ import { useCart } from "../../Context/cart-context";
 export default function ProductCard(props) {
   const { cart, dispatch } = useCart();
   const { id, name, price, thumbnail, discount } = props?.products;
-  const originalPrice = price + discount / 100;
-  const handleAddToCart = () => {
+  const handleAddToCart = () =>
     dispatch({
       type: "ADD_TO_CART",
       payload: props.products,
     });
-  };
-
   const isAlreadyExists = cart.some((product) => product.id === id);
-
+  const originalPrice = price + (discount / 100) * price;
   return (
     <div id="card" className="card ecom">
       <div className="product-image">

@@ -17,6 +17,7 @@ const CartContextProvider = ({ children }) => {
       value={{
         cart: state.cart,
         dispatch,
+        savedForLater: state.savedForLater,
       }}
     >
       {children}

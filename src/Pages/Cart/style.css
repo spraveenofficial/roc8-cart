@@ -68,6 +68,35 @@
 .cart-item-product .btn:nth-child(1) {
   background: var(--red-color);
 }
+.no-items-cart {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist-page {
+  margin: 0rem 3.125rem;
+  display: flex;
+  flex-direction: column;
+}
+.wishlish-items .ecom {
+  flex: 0 0 16.125rem;
+}
+.wishlish-items {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .wishlish-items .ecom {
+    flex: 0 0 13.125rem;
+  }
+  .wishlist-page {
+    margin: 0rem 0.625rem;
+  }
+}
 
 @media (max-width: 767px) {
   .cart-div {

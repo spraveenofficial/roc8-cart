@@ -3,8 +3,7 @@ const products = [
   {
     id: uuidv4(),
     name: "T-shirt for men",
-    thumbnail:
-      "https://mockups-design.com/wp-content/uploads/2021/08/Hanging_T-Shirt_Mockup_2.jpg",
+    thumbnail: "https://tailorkart.netlify.app/assets/man.jpg",
     price: 4999,
     originalPrice: 5498,
     discount: 10,
@@ -14,8 +13,7 @@ const products = [
   {
     id: uuidv4(),
     name: "T-shirt for women",
-    thumbnail:
-      "https://mockups-design.com/wp-content/uploads/2021/08/Hanging_T-Shirt_Mockup_2.jpg",
+    thumbnail: "https://tailorkart.netlify.app/assets/man.jpg",
     price: 1400,
     originalPrice: 1638,
     discount: 17,
@@ -25,8 +23,7 @@ const products = [
   {
     id: uuidv4(),
     name: "T-shirt for kid",
-    thumbnail:
-      "https://mockups-design.com/wp-content/uploads/2021/08/Hanging_T-Shirt_Mockup_2.jpg",
+    thumbnail: "https://tailorkart.netlify.app/assets/man.jpg",
     price: 1599,
     originalPrice: 1854,
     discount: 16,
@@ -36,8 +33,7 @@ const products = [
   {
     id: uuidv4(),
     name: "Sweater for women ",
-    thumbnail:
-      "https://mockups-design.com/wp-content/uploads/2021/08/Hanging_T-Shirt_Mockup_2.jpg",
+    thumbnail: "https://tailorkart.netlify.app/assets/man.jpg",
     price: 7999,
     originalPrice: 11.198,
     discount: 40,
