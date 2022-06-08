@@ -1,0 +1,22 @@
+.products {
+  width: 100%;
+  padding: 0.625rem;
+  height: fit-content;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.main-page-btn {
+  margin: 2rem;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-page-btn > * {
+  color: white;
+}
