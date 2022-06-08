@@ -19,9 +19,6 @@ export default function ProductCard(props) {
         <img src={thumbnail} />
       </div>
       <div className="cart-badge">
-        <button className="ico">
-          <i className="fas fa-heart" aria-hidden="true"></i>
-        </button>
         <div className="card-text">{name}</div>
         <div className="card-price">
           <span className="price-now"> Rs. {price}</span>

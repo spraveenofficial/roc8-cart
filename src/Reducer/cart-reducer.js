@@ -22,7 +22,33 @@ const cartReducer = (state, action) => {
     case "REMOVE_FROM_CART":
       return {
         ...state,
-        cart: state.cart.filter((product) => product.id !== action.payload.id),
+        cart: state.cart.filter((product) => product.id !== action.payload),
+      };
+    case "INCREASE_ITEM":
+      return {
+        ...state,
+        cart: state.cart.map((product) => {
+          if (product.id === action.payload) {
+            product = {
+              ...product,
+              quantity: product.quantity + 1,
+            };
+          }
+          return product;
+        }),
+      };
+    case "DECREASE_ITEM":
+      return {
+        ...state,
+        cart: state.cart.map((product) => {
+          if (product.id === action.payload) {
+            product = {
+              ...product,
+              quantity: product.quantity - 1 < 1 ? 1 : product.quantity - 1,
+            };
+          }
+          return product;
+        }),
       };
     default:
       return {

@@ -8,7 +8,6 @@ const useCart = () => useContext(CartContext);
 const CartContextProvider = ({ children }) => {
   const initialState = {
     cart: [],
-    wishlist: [],
     savedForLater: [],
   };
 
