@@ -6,7 +6,6 @@ const Cart = () => {
   const totalPriceOfCart = cart.reduce((accu, curr) => {
     return accu + curr.price * curr.quantity;
   }, 0);
-  console.log(totalPriceOfCart);
   return cart.length === 0 ? (
     <div className="error-page">
       <h1>Your cart is Empty.</h1>
@@ -30,7 +29,7 @@ const Cart = () => {
             <hr />
             <div className="rate-justify">
               <p>Price({cart.length} items)</p>
-              <p>₹14000</p>
+              <p>₹{totalPriceOfCart}</p>
             </div>
             <div className="rate-justify">
               <p>Discount</p>

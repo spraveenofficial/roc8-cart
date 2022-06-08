@@ -9,6 +9,8 @@ export default function CartCard(props) {
     dispatch({ type: "REMOVE_FROM_CART", payload: id });
   const handleIncrease = () => dispatch({ type: "INCREASE_ITEM", payload: id });
   const handleDecrease = () => dispatch({ type: "DECREASE_ITEM", payload: id });
+  const handleSaveLater = () =>
+    dispatch({ type: "MOVE_TO_SAVELATER", payload: props.products });
   return (
     <div key={id} className="cart-item-product flex mb-10">
       <img src={thumbnail} alt="product-img" />
@@ -21,7 +23,11 @@ export default function CartCard(props) {
         <h2 className="text-gray">{discount}% off</h2>
         <div className="quantity-div flex mb-10">
           <p>Quantity:</p>
-          <i onClick={handleDecrease} className="fa-solid fa-minus"></i>
+          {quantity === 1 ? (
+            <i onClick={handleRemoveFromCart} className="fa-solid fa-trash"></i>
+          ) : (
+            <i onClick={handleDecrease} className="fa-solid fa-minus"></i>
+          )}
           <input type="number" value={quantity} readOnly />
           <i onClick={handleIncrease} className="fa-solid fa-plus"></i>
         </div>
@@ -31,10 +37,7 @@ export default function CartCard(props) {
         >
           Remove from Cart
         </button>
-        <button
-          // onClick={() => moveToWishlist(eachItem)}
-          className="btn"
-        >
+        <button onClick={handleSaveLater} className="btn">
           Move to Save Later
         </button>
       </div>

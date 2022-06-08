@@ -50,6 +50,12 @@ const cartReducer = (state, action) => {
           return product;
         }),
       };
+    case "MOVE_TO_SAVELATER":
+      return {
+        ...state,
+        cart: state.cart.filter((product) => product.id !== action.payload.id),
+        savedForLater: [...state.savedForLater, action.payload],
+      };
     default:
       return {
         ...state,
