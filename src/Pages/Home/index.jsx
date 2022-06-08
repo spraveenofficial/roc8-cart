@@ -5,7 +5,6 @@ import products from "../../Utils/product";
 import "./style.css";
 export default function Home() {
   const { cart } = useCart();
-  console.log(cart);
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate("/cart");
@@ -15,7 +14,12 @@ export default function Home() {
     <>
       <button onClick={handleNavigate} className="btn main-page-btn">
         <i className="fas fa-shopping-cart"></i>
-        <p>Goto Cart</p>
+        <p>Cart</p>
+        {cart.length > 0 && (
+          <div className="badges">
+            <div className="number">{cart.length}</div>
+          </div>
+        )}
       </button>
       <div className="main products">
         {products.map((product) => (

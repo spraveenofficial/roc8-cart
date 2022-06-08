@@ -20,3 +20,35 @@
 .main-page-btn > * {
   color: white;
 }
+
+.badges {
+  position: relative;
+  width: min-content;
+  cursor: pointer;
+}
+.badges > div {
+  bottom: 5px;
+  right: 1px;
+  background: var(--primary-color);
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.badges .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -35px;
+  right: -26px;
+  position: absolute;
+  color: var(--white-color);
+  font-weight: 900;
+  height: 24px;
+  width: 24px;
+  border: none;
+  font-size: 0.8rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
